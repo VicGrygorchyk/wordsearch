@@ -34,7 +34,8 @@ def run_main():
     words_arr = get_doc_file_to_np()
 
     # find all possible words from the doc
-    for word in words_arr:
+    for word in np.nditer(words_arr):
+        word = np.array2string(word, separator=None).strip("\'")
         word_ = board.contains_word(word)
         if word_:
             print(word_)
