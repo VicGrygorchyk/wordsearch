@@ -18,7 +18,7 @@ def get_doc_file_to_np():
     with open(DATA_PATH, "r+") as doc:
         lines = doc.readlines()
         for line in lines:
-            arr.append(line)
+            arr.append(line.strip())
 
     np_arr = np.array(arr, dtype=np.str)
     return np_arr
