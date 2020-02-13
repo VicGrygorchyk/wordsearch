@@ -4,7 +4,6 @@ Displays results to the user.
 
 """
 import numpy as np
-import pandas as pd
 
 from global_const import DATA_PATH
 from source import args_parser
