@@ -33,7 +33,9 @@ class Board:
 
     def _search_by_diagonal(self, word):
         for index in range(len(self.table[0])):
-            column = "".join([word[index] for word in self.table])
-            if word in column or "".join(reversed(word)) in column:
+            diagonal = ""
+            for k in range(len(self.table)):
+                diagonal = "".join([word[k] for word in self.table])
+            if word in diagonal or "".join(reversed(word)) in diagonal:
                 return word
         return False
