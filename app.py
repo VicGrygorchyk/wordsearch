@@ -36,6 +36,7 @@ def run_main():
     # find all possible words from the doc
     for word in np.nditer(words_arr):
         word = np.array2string(word, separator=None).strip("\'")
+        # TODO Try to use np array for board as well for faster access
         word_ = board.contains_word(word)
         if word_:
             print(word_)
